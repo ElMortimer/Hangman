@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+
+<StackPane fx:id="gameRoot" xmlns="http://javafx.com/javafx/25"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="Application.GameController"
+           styleClass="menu-background">
+
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+
+    <children>
+        <ImageView fx:id="enemyImage"
+                   fitWidth="600"
+                   preserveRatio="true"
+                   opacity="0.0"
+                   visible="false"
+                   StackPane.alignment="CENTER"/>
+
+        <AnchorPane>
+            <children>
+                <VBox fx:id="difficultyBox"
+                      alignment="CENTER"
+                      spacing="30"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0"
+                      AnchorPane.bottomAnchor="0.0">
+
+                    <padding>
+                        <Insets top="50" right="50" bottom="50" left="50"/>
+                    </padding>
+
+                    <Label text="SELECT DIFFICULTY" styleClass="game-title"/>
+                    <Button fx:id="easyButton" text="EASY" styleClass="game-button" maxWidth="300"/>
+                    <Button fx:id="mediumButton" text="MEDIUM" styleClass="game-button" maxWidth="300"/>
+                    <Button fx:id="hardButton" text="HARD" styleClass="game-button" maxWidth="300"/>
+                </VBox>
+
+                <VBox fx:id="nameBox"
+                      alignment="CENTER"
+                      spacing="30"
+                      visible="false"
+                      managed="false"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0"
+                      AnchorPane.bottomAnchor="0.0">
+
+                    <padding>
+                        <Insets top="50" right="50" bottom="50" left="50"/>
+                    </padding>
+
+                    <Label text="ENTER YOUR NAME" styleClass="game-title"/>
+                    <TextField fx:id="nameField"
+                               promptText="Player name..."
+                               styleClass="game-textfield"
+                               maxWidth="300"/>
+                    <Button fx:id="startButton" text="START GAME" styleClass="game-button" maxWidth="300"/>
+                </VBox>
+
+                <!-- Game Screen -->
+                <VBox fx:id="gameBox"
+                      alignment="CENTER"
+                      spacing="25"
+                      visible="false"
+                      managed="false"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0"
+                      AnchorPane.bottomAnchor="0.0">
+
+                    <padding>
+                        <Insets top="30" right="30" bottom="30" left="30"/>
+                    </padding>
+
+                    <Label text=" HANGMAN" styleClass="game-title"/>
+
+                    <Pane fx:id="hangmanPane"
+                          styleClass="hangman-pane"
+                          prefWidth="300"
+                          prefHeight="300"
+                          minWidth="300"
+                          minHeight="300"
+                          maxWidth="300"
+                          maxHeight="300"/>
+
+                    <Label fx:id="wordLabel" text="_ _ _ _ _" styleClass="word-display"/>
+
+                    <Label fx:id="livesLabel" text="Lives: 6/6" styleClass="lives-display"/>
+
+                    <Label fx:id="usedLettersLabel" text="Used: none" styleClass="used-letters-display"/>
+
+                    <HBox alignment="CENTER" spacing="15">
+                        <TextField fx:id="guessField"
+                                   promptText="Enter a letter..."
+                                   styleClass="game-textfield"
+                                   prefWidth="200"/>
+                        <Button fx:id="guessButton" text="GUESS" styleClass="game-button"/>
+                    </HBox>
+
+                    <Label fx:id="messageLabel" text="Good luck!" styleClass="message-display"/>
+
+                    <HBox alignment="CENTER" spacing="20">
+                        <Button fx:id="newGameButton" text="NEW GAME" styleClass="game-button-small"/>
+                        <Button fx:id="menuButton" text="MAIN MENU" styleClass="game-button-small"/>
+                    </HBox>
+                </VBox>
+
+                <VBox fx:id="gameOverBox"
+                      alignment="CENTER"
+                      spacing="40"
+                      visible="false"
+                      managed="false"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0"
+                      AnchorPane.bottomAnchor="0.0">
+
+                    <padding>
+                        <Insets top="50" right="50" bottom="50" left="50"/>
+                    </padding>
+
+                    <Label fx:id="gameOverLabel" text="GAME OVER" styleClass="game-over-title"/>
+                    <Label fx:id="finalScoreLabel" text="" styleClass="final-score-label"/>
+
+                    <VBox alignment="CENTER" spacing="20">
+                        <Button fx:id="playAgainButton" text="PLAY AGAIN" styleClass="game-button" maxWidth="300"/>
+                        <Button fx:id="changeDifficultyButton" text="CHANGE DIFFICULTY" styleClass="game-button" maxWidth="300" onAction="#onChangeDifficultyButton"/>
+                        <Button fx:id="mainMenuButton" text="MAIN MENU" styleClass="game-button" maxWidth="300"/>
+                    </VBox>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

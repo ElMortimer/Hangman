@@ -1,0 +1,9 @@
+# Logic.Player;Difficulty;Logic.Score;Date
+ham;easy;2;2025-10-17
+morti;easy;1;2025-10-17
+darius;medium;3;2025-10-17
+morti;easy;2;2025-10-27
+mo;easy;6;2025-10-27
+mo;easy;3;2025-10-27
+mo;easy;5;2025-10-28
+wer;easy;3;2025-10-29
