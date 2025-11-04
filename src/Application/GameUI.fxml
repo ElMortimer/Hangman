@@ -65,7 +65,6 @@
                     <Button fx:id="startButton" text="START GAME" styleClass="game-button" maxWidth="300"/>
                 </VBox>
 
-                <!-- Game Screen -->
                 <VBox fx:id="gameBox"
                       alignment="CENTER"
                       spacing="25"
