@@ -27,7 +27,6 @@
                            text=" HIGH SCORES "
                            styleClass="game-title"/>
 
-                    <!-- Easy Scores -->
                     <VBox fx:id="easyScoresBox"
                           alignment="TOP_CENTER"
                           spacing="10"
@@ -40,7 +39,6 @@
                         <Label text="EASY" styleClass="difficulty-header"/>
                     </VBox>
 
-                    <!-- Medium Scores -->
                     <VBox fx:id="mediumScoresBox"
                           alignment="TOP_CENTER"
                           spacing="10"
@@ -53,7 +51,6 @@
                         <Label text="MEDIUM" styleClass="difficulty-header"/>
                     </VBox>
 
-                    <!-- Hard Scores -->
                     <VBox fx:id="hardScoresBox"
                           alignment="TOP_CENTER"
                           spacing="10"
@@ -66,7 +63,6 @@
                         <Label text="HARD" styleClass="difficulty-header"/>
                     </VBox>
 
-                    <!-- Back Button -->
                     <Button fx:id="backButton"
                             text="BACK TO MENU"
                             styleClass="game-button"
